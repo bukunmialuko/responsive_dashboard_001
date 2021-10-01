@@ -2,10 +2,12 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dashboard_001/constants.dart';
+import 'package:responsive_dashboard_001/models/RecentFile.dart';
 
 import 'components/chart.dart';
 import 'components/header.dart';
 import 'components/my_files.dart';
+import 'components/recent_files.dart';
 import 'components/storage_details.dart';
 import 'components/storage_info_card.dart';
 
@@ -28,7 +30,15 @@ class DashboardScreen extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 5,
-                  child: MyFiles(),
+                  child: Column(
+                    children: [
+                      MyFiles(),
+                      SizedBox(
+                        height: defaultPadding,
+                      ),
+                      RecentFiles()
+                    ],
+                  ),
                 ),
                 SizedBox(
                   width: defaultPadding,
