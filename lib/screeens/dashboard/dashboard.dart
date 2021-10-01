@@ -5,6 +5,7 @@ import 'package:responsive_dashboard_001/constants.dart';
 
 import 'components/chart.dart';
 import 'components/header.dart';
+import 'components/my_files.dart';
 import 'components/storage_details.dart';
 import 'components/storage_info_card.dart';
 
@@ -26,11 +27,9 @@ class DashboardScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                    flex: 5,
-                    child: Container(
-                      color: Colors.white,
-                      height: 500,
-                    )),
+                  flex: 5,
+                  child: MyFiles(),
+                ),
                 SizedBox(
                   width: defaultPadding,
                 ),
